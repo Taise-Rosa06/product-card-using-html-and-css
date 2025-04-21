@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #de522f;
+}
+
+.container{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .product{
+    background: #fafafa;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container .product .image{
+    width: 300px;
+    height: 150px;
+    margin: auto;
+}
+
+.container .product .image .product-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.8s linear;
+}
+
+.container .product .color{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    justify-content: center;
+}
+
+.container .product .color span{
+    width: 15px;
+    height: 15px;
+    margin: 0 15px;
+    border-radius: 50%;
+    background: #de522f;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .product .color .green{
+    background: #9abe62;
+}
+
+.container .product .color .black{
+    background: #222627;
+}
+
+.container .product .color .red{
+    background: #b41d26;
+}
+
+.container .product .color .orange{
+    background: #de522f;
+}
+
+.container .product .color .active::after{
+    content: " ";
+    width: 17px;
+    height: 17px;
+    border: 2px solid #333;
+    position: absolute;
+    border-radius: 50%;
+    left: -2.5px;
+    top: -2.5px; 
+}
+
+.container .product .title{
+    font-size: 22px;
+    text-align: center;
+}
+
+.container .product .detail{
+    text-align: center;
+}
+
+.container .product .detail p{
+    font-size: 25px;
+    margin: 15px;
+}
+
+.container .product .detail p span{
+    color: #de522f;
+}
+
+.container .product .detail a{
+    text-decoration: none;
+    background: #de522f;
+    border-radius: 8px;
+    color: white;
+    margin: 15px;
+    padding: 8px 45px;
+
+}

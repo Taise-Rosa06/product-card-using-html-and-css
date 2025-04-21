@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Card Design Using HTML and CSS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="image">
+                <img class="product-image" src="imagens/laranja.jpg" alt="">
+            </div>
+            <div class="color">
+                <span class="orange active" data-image="imagens/laranja.jpg" data-color="#DE522F"></span>
+                <span class="green" data-image="imagens/verde.jpg" data-color="#9ABE62"></span>
+                <span class="black" data-image="imagens/preto.jpg" data-color="#222627"></span>
+                <span class="red" data-image="imagens/vermelho.jpg" data-color="#B41D26"></span>
+            </div>
+            <div class="title">
+                Camiseta De Manga Curta Em Meia Malha De Algodão
+            </div>
+            <div class="detail">
+                <p>Preço: <span>R$50</span></p>
+                <a href="#">ADD TO CART</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(".color span").click(function(){
+            $(".color span").removeClass("active");
+            $(this).addClass("active");
+            $(".detail span").css("color", $(this).attr("data-color"));
+            $(".detail a").css("background", $(this).attr("data-color"));
+            $("body").css("background", $(this).attr("data-color"));
+            $(".product-image").attr("src", $(this).attr("data-image"));
+        });
+    </script>
+</body>
+</html>
